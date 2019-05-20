@@ -1,0 +1,89 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Peso pela composição corporal</ion-title>
+  </ion-navbar>
+  <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-size: 90%;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group>
+    <ion-list-header>
+      Sexo
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Homem</ion-label>
+      <ion-radio (click)="setSexo()" checked="true" value="homem"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mulher</ion-label>
+      <ion-radio (click)="setSexo()" value="mulher"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Altura atual (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="altura" name="altura"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Circunferência do pulso</ion-label>
+      <ion-input type="number" [(ngModel)]="circunferenciaP" name="circunferenciaP"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <p text-center>
+      <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round>Calcular</button>
+    </p>
+  </div>
+
+  <div style="padding-top: 60px; padding-left: 8px; padding-right: 8px">
+    <h1 style="font-size: 120%" align="center">Compleção corporal</h1>
+    <table>
+      <tr>
+        <th></th>
+        <th>Grande</th>
+        <th>Média</th>
+        <th>Pequena</th>
+      </tr>
+      <tr>
+        <td> Homens</td>
+        <td> menor que 9,6 </td>
+        <td> 9,6 - 10,4</td>
+        <td> maior que 10,4</td>
+      </tr>
+      <tr>
+        <td> Homens</td>
+        <td> menor que 9,6 </td>
+        <td> 9,6 - 10,4</td>
+        <td> maior que 10,4</td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

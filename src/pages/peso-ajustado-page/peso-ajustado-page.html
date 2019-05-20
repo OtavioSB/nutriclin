@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Peso ajustado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Peso atual (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="pesoA" name = "pesoA"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Peso ideal (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="pesoI" name = "pesoI"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <div>
+    <p text-center>
+        <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round >Calcular</button>
+    </p>
+  </div>
+
+</ion-content>

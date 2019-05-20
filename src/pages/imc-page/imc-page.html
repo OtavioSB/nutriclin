@@ -1,0 +1,101 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Índice de massa corporal</ion-title>
+  </ion-navbar>
+  <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-size: 90%;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Peso atual (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="peso" name="peso"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Altura atual (m)</ion-label>
+      <ion-input type="number" [(ngModel)]="altura" name="altura"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <p>
+      <button style="background-color:#00995D; position: absolute; right:absolute;" (click)="calcular()" ion-button color="secondary" round>Calcular</button>
+      <!-- <button style="background-color:#00995D; position: absolute; right:0" (click)="salvar()" ion-button color="secondary" round>Salvar histórico</button> -->
+    </p>
+  </div>
+
+  <div style="padding-top: 80px; padding-left: 8px; padding-right: 8px">
+    <table>
+      <tr>
+        <th>IMC ( Kg/m2)</th>
+        <th>Classificação</th>
+        <th>Risco de co-morbidades</th>
+      </tr>
+      <tr>
+        <td> menor que 16,00</td>
+        <td>Magreza grau 3</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>16,00 – 16,9</td>
+        <td>Magreza grau 2</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>17,00 – 18,4</td>
+        <td>Magreza grau 1</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>18,5 – 24,9</td>
+        <td>Eutrofia/Normal</td>
+        <td>Médio</td>
+      </tr>
+      <tr>
+        <td>25,0 – 29,9</td>
+        <td>Pré obeso/sobrepeso</td>
+        <td>Aumentado</td>
+      </tr>
+      <tr>
+        <td>30,00 – 34,9</td>
+        <td>Obesidade grau 1</td>
+        <td>Moderado</td>
+      </tr>
+      <tr>
+        <td>35,0 – 39,9</td>
+        <td>Obesidade grau 2</td>
+        <td>Severo</td>
+      </tr>
+      <tr>
+        <td>maior que 40,00</td>
+        <td>Obesidade grau 3</td>
+        <td>Muito severo</td>
+      </tr>
+    </table>
+  </div>
+  <!-- <button style="background-color:#00995D; position: absolute; left: 0%; right: 0%; bottom:0; width: 100%;" [navPush]="graficoPage" ion-button color="blue">Gerar gráfico do histórico</button> -->
+  <!-- <button style="background-color:#00995D; position: absolute; left: 0%; right: 0%; bottom:0; width: 100%;" (click)="salvar()" ion-button color="blue">Salvar Resultado</button> -->
+</ion-content>

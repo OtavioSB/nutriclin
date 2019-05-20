@@ -1,0 +1,86 @@
+<ion-header>
+
+    <ion-navbar  color="navBarColor">
+      <ion-title>Adequação de peso</ion-title>
+    </ion-navbar>
+    <style>
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+      }
+      
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          font-size: 90%;
+      }
+      
+      tr:nth-child(even) {
+          background-color: #dddddd;
+      }
+      </style>
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <ion-list>
+  
+      <ion-item>
+        <ion-label floating>Peso atual (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="pesoA" name = "pesoA"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Peso ideal (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="pesoI" name = "pesoI"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+  
+    <div>
+      <p text-center>
+          <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round >Calcular</button>
+      </p>
+    </div>
+
+    <div style="padding-top: 80px; padding-left: 8px; padding-right: 8px">
+      <table>
+        <tr>
+          <th>Adequação de peso (%)</th>
+          <th>Estado nutricional</th>
+        </tr>
+        <tr>
+          <td> menor que 70</td>
+          <td>Desnutrição grave</td>
+        </tr>
+        <tr>
+          <td>16,00 – 16,9</td>
+          <td>Magreza grau 2</td>
+        </tr>
+        <tr>
+          <td>70,1 a 80</td>
+          <td>Desnutrição moderada</td>
+        </tr>
+        <tr>
+          <td>80,1 a 90</td>
+          <td>Desnutrição leve</td>
+        </tr>
+        <tr>
+          <td>90,1 a 110</td>
+          <td>Eutrofia</td>
+        </tr>
+        <tr>
+          <td>110,1 a 120</td>
+          <td>Sobrepeso</td>
+        </tr>
+        <tr>
+          <td>maior que 120</td>
+          <td>Obesidade</td>
+        </tr>
+      </table>
+    </div>
+  
+  </ion-content>

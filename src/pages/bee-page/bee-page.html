@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Gasto energético basal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-list radio-group>
+      <ion-list-header>
+        Sexo
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Homem</ion-label>
+        <ion-radio (click)="setSexo()" checked="true" value="homem"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mulher</ion-label>
+        <ion-radio (click)="setSexo()" value="mulher"></ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item>
+      <ion-label floating>Idade</ion-label>
+      <ion-input type="number" [(ngModel)]="idade" name="idade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Estatura (m)</ion-label>
+      <ion-input type="number" [(ngModel)]="estatura" name="estatura"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Peso atual (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="peso" name="peso"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <p text-center>
+      <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round>Calcular</button>
+    </p>
+  </div>
+
+</ion-content>

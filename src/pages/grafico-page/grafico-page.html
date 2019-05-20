@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar  color="navBarColor">
+    <ion-title>
+      Histórico de evolução
+    </ion-title>
+  </ion-navbar>
+  <style>
+      h1 {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          font-size: 90%;
+          text-align: center;
+          background-color: #00C97A;
+          border-radius: 20%;
+      }
+  </style>
+</ion-header>
+ 
+<ion-content>
+ 
+    <ion-refresher (ionRefresh)="doRefresh($event);">
+      <ion-refresher-content>
+      </ion-refresher-content>    
+    </ion-refresher>
+    <ion-card>
+      <ion-card-header>
+        <h1 align="center"> Diagnóstico IMC </h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #graficoIMC></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <br>
+
+    <ion-card>
+      <ion-card-header>
+        <h1 align="center"> Gasto energético basal </h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #graficoBEE></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <br>
+
+    <ion-card>
+      <ion-card-header>
+        <h1 align="center"> Gasto energético basal </h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #graficoEER></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <br>
+
+    <ion-card>
+      <ion-card-header>
+        <h1 align="center"> Necessidades Energéticas Idosos </h1>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #graficoNEE></canvas>
+      </ion-card-content>
+    </ion-card> 
+
+    <!-- <ion-card>
+      <ion-card-header>
+        <strong>Reta crescente</strong>
+        <hr>
+      </ion-card-header>
+      <ion-card-content>
+        Indica que houve um ganho de peso desde a ultima vez que registrou seus dados
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+       <strong> Reta decrescente </strong>
+       <hr>
+      </ion-card-header>
+      <ion-card-content>
+        Indica que houve uma perda de peso desde a ultima vez que registrou seus dados
+      </ion-card-content>
+    </ion-card> -->
+
+</ion-content>

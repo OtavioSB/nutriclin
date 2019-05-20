@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar  color="navBarColor">
+    <ion-title>
+      Resultados
+    </ion-title>
+  </ion-navbar>
+  <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+</ion-header>
+
+<ion-content padding>
+<div>
+    <p style="font-size:50px" text-center ><strong>NutriClin</strong></p>
+</div>
+<div style="padding-top: 100px">
+  <h2>IMC: Peso atual (kg)/ Altura2 (m)</h2>
+
+  <table>
+    <tr>
+      <th>IMC ( Kg/m2)</th>
+      <th>Classificação</th>
+      <th>Risco de co-morbidades</th>
+    </tr>
+    <tr>
+      <td> menor que 16,00</td>
+      <td>Magreza grau 3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>16,00 – 16,9</td>
+      <td>Magreza grau 2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>17,00 – 18,4</td>
+      <td>Magreza grau 1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>18,5 – 24,9</td>
+      <td>Eutrofia/Normal</td>
+      <td>Médio</td>
+    </tr>
+    <tr>
+      <td>25,0 – 29,9</td>
+      <td>Pré obeso/sobrepeso</td>
+      <td>Aumentado</td>
+    </tr>
+    <tr>
+      <td>30,00 – 34,9</td>
+      <td>Obesidade grau 1</td>
+      <td>Moderado</td>
+    </tr>
+    <tr>
+      <td>35,0 – 39,9</td>
+      <td>Obesidade grau 2</td>
+      <td>Severo</td>
+    </tr>
+    <tr>
+      <td>maior que 40,00</td>
+      <td>Obesidade grau 3</td>
+      <td>Muito severo</td>
+    </tr>
+  </table>
+</div>
+
+<div style="padding-top: 50px">
+  <h2>Adequação de peso (%) = peso atual x 100/peso ideal.</h2>
+
+  <table>
+    <tr>
+      <th>Adequação de peso (%)</th>
+      <th>Estado nutricional</th>
+    </tr>
+    <tr>
+      <td> menor que 70</td>
+      <td>Desnutrição grave</td>
+    </tr>
+    <tr>
+      <td>16,00 – 16,9</td>
+      <td>Magreza grau 2</td>
+    </tr>
+    <tr>
+      <td>70,1 a 80</td>
+      <td>Desnutrição moderada</td>
+    </tr>
+    <tr>
+      <td>80,1 a 90</td>
+      <td>Desnutrição leve</td>
+    </tr>
+    <tr>
+      <td>90,1 a 110</td>
+      <td>Eutrofia</td>
+    </tr>
+    <tr>
+      <td>110,1 a 120</td>
+      <td>Sobrepeso</td>
+    </tr>
+    <tr>
+      <td>maior que 120</td>
+      <td>Obesidade</td>
+    </tr>
+  </table>
+</div>
+</ion-content>

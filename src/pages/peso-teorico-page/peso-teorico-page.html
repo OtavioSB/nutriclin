@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Peso Teorico</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label floating>Idade</ion-label>
+      <ion-input type="number" [(ngModel)]="idade" name="idade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Altura atual (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="altura" name="altura"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <p text-center>
+      <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round>Calcular</button>
+    </p>
+  </div>
+
+</ion-content>

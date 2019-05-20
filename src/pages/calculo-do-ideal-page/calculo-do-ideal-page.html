@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar  color="navBarColor">
+      <ion-title>Cálculo do ideal</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <ion-list>
+  
+      <ion-item>
+        <ion-label floating>IMC desejado</ion-label>
+        <ion-input type="number" [(ngModel)]="imcDesejado" name = "imcDesejado"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Estatura (cm)</ion-label>
+        <ion-input type="number" [(ngModel)]="estatura" name = "estatura"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+  
+    <div>
+      <p text-center>
+          <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round >Calcular</button>
+      </p>
+    </div>
+  
+  </ion-content>

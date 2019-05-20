@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="navBarColor">
+    <ion-title>cadastro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome" name="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone</ion-label>
+      <ion-input type="number" [(ngModel)]="telefone" name="telefone"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <p text-center>
+      <button style="background-color:#00995D;" ion-button color="secondary" (click) ="salvar()" round>Cadastrar Novo</button>
+    </p>  
+    </div>
+
+  <ion-searchbar placeholder="Procurar..." (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-scroll scrollY="true">
+      <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item.nome }} - {{item.telefone}}
+        </button>  
+      </ion-list>
+    </ion-scroll>
+</ion-content>

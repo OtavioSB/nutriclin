@@ -1,0 +1,281 @@
+<ion-header>
+  <ion-navbar color="navBarColor">
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-card class="center" style="border-color:black; 
+          background-color: white !important;
+          width: 50% !important;
+          height: 17% !important;
+          margin-top: 0% !important">
+    <img class="centerImg" src="../assets/imgs/listaImagem.png">
+  </ion-card>
+
+<ion-scroll scrollY="true" style="background-color:#e6e6e6 ">
+  <div style="margin-top:40%">
+    <ion-card style="border-color:black; background-color: #00995D !important">
+      <p text-center [navPush]="imcPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> IMC - Índice de massa corporal </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemIMC()" name={{nameImgCard1}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard1}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard1}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <div>
+    <ion-card>
+      <p text-center [navPush]="beePage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> BEE - Gasto energético basal </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemBEE()" name={{nameImgCard2}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard2}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard2}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="border-color:black; background-color: #00995D !important">
+      <p text-center [navPush]="eerPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> EER - Gasto energético total </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemEER()" name={{nameImgCard3}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard3}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard3}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <div>
+    <ion-card>
+      <p text-center [navPush]="hbPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> Necessidades energéticas </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemHB()" name={{nameImgCard4}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard4}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard4}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <div>
+    <ion-card style="border-color:black; background-color: #00995D !important">
+      <p text-center [navPush]="pesoCorporeoImcPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> Calculo do peso corpóreo com base no IMC </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoCorporeoImc()" name={{nameImgCard5}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard5}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard5}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <p text-center text-center [navPush]="pesoTeoricoPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong> Calculo de peso teórico para adolescentes </strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoTeorico()" name={{nameImgCard6}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard6}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard6}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="border-color:black; background-color: #00995D !important">
+      <p text-center text-center [navPush]="pesoCorporalAntPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Peso corporal a partir de dados antropométricos</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoCorpAnt()" name={{nameImgCard7}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard7}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard7}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <div>
+    <ion-card>
+      <p text-center text-center [navPush]="calculoDoIdealPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Cálculo do ideal</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemCalcDoIdeal()" name={{nameImgCard8}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard8}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard8}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="border-color: black; background-color: #00995D !important">
+      <p text-center text-center [navPush]="adequacaoDePesoPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Adequação de peso (%)</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemAdequacaoDePeso()" name={{nameImgCard9}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard9}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard9}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <ion-card>
+      <p text-center text-center [navPush]="pesoAjustadoPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Peso ajustado</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoAjustado()" name={{nameImgCard10}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard10}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard10}}
+        </p>
+      </ion-card-content>
+    </ion-card> -->
+  </div>
+
+  <div>
+    <ion-card style="border-color:black;">
+      <p text-center text-center [navPush]="pesoParaIdososPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Estimativa de peso para idosos</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoParaIdosos()" name={{nameImgCard11}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard11}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard11}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="border-color: black; background-color: #00995D !important">
+      <p text-center text-center [navPush]="alturaParaIdososPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Estimativa de altura para idosos</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemAlturaParaIdosos()" name={{nameImgCard12}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard12}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard12}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <div>
+    <ion-card >
+      <p text-center text-center [navPush]="pesoComposicaoPage" style="color:white; margin-left:10px;margin-top:10px; font-size:18px">
+        <strong>Estimativa de peso pela composição corporal</strong>
+      </p>
+      <hr>
+      <p style="margin-bottom:5px;margin-top:10px" text-center>
+        <ion-icon (click)="setMensagemPesoCorp()" name={{nameImgCard13}}></ion-icon>
+      </p>
+      <ion-card-content>
+        <p style="color:white;" text-center>
+          {{mensagemCard13}}
+        </p>
+        <br>
+        <p style="color:white;" text-center>
+          {{fontCard13}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-scroll>

@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title>Peso corporal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-list radio-group>
+      <ion-list-header>
+        Sexo
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Homem</ion-label>
+        <ion-radio (click)="setSexo()" checked="true" value="homem"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mulher</ion-label>
+        <ion-radio (click)="setSexo()" value="mulher"></ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item>
+      <ion-label floating>Altura do joelho</ion-label>
+      <ion-input type="number" [(ngModel)]="alturaJ" name="alturaJ"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Circunferência da panturrilha</ion-label>
+      <ion-input type="number" [(ngModel)]="circunferenciaP" name="circunferenciaP"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Circunferência do braço</ion-label>
+      <ion-input type="number" [(ngModel)]="circunferenciaB" name="circunferenciaB"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Prega cutânea sub escapular</ion-label>
+      <ion-input type="number" [(ngModel)]="prega" name="prega"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <p text-center>
+      <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round>Calcular</button>
+    </p>
+  </div>
+
+</ion-content>

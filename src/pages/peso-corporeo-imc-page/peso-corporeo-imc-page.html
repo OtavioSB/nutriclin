@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar  color="navBarColor">
+    <ion-title> Peso corpóreo com base no IMC</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>IMC</ion-label>
+      <ion-input type="number" [(ngModel)]="imc" name = "imc"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Altura atual (m)</ion-label>
+      <ion-input type="number" [(ngModel)]="altura" name = "altura"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <div>
+    <p text-center>
+        <button style="background-color:#00995D;" (click)="calcular()" ion-button color="secondary" round >Calcular</button>
+    </p>
+  </div>
+</ion-content>
